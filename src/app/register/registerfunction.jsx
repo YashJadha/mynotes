@@ -1,19 +1,17 @@
 'use client'
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { doPost } from '../actions/reqActions';
 import style from './register.module.css'
 export default function Register() {
-
+    const router = useRouter();
     const submithandler = async (FormData) => {
         // e.preventDefault();
         // const formdata = new FormData(e.currentTarget);
         let data = {};
-        FormData.forEach((value, key)=> (data[key] = value));
+        FormData.forEach((value, key) => (data[key] = value));
         const res = await doPost('/registerroute', data);
         console.log(res);
-        if(res){
-            redirect('/login');
-        }
+        router.replace('/login');
     }
 
     return (
@@ -22,7 +20,7 @@ export default function Register() {
                 Register Here
             </div>
             <form className={style.form} action={submithandler}>
-            <div className={style.maininpt}>
+                <div className={style.maininpt}>
                     <label htmlFor="name" className={style.lable}>username :</label>
                     <input type="text" className={style.inpt} name='name' />
                 </div>

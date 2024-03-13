@@ -8,8 +8,14 @@ import Navbar from '../navcompo/navbar';
 import { useEffect } from 'react';
 import Loading from '../loading/Loading';
 import RevmoveCompo from '../removeCompo/removecompo';
+import { useSession } from 'next-auth/react';
+import { redirect } from 'next/navigation';
 
 export default function TopicsList() {
+    const session = useSession();
+    if(session.status === "unauthenticated"){
+        redirect('/');
+    }
 
     const [isloading, setIsloading] = useState(true);
     const [apidata, setApidata] = useState([]);

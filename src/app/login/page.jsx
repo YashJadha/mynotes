@@ -18,9 +18,7 @@ export default function LoginForm(){
     if(session.status === "authenticated"){
         redirect('/topiclist');
     }
-    else if(session.status === "unauthenticated"){
-        redirect('/register');
-    }
+    
     return(
         <main className={style.main}>
             <form className={style.form} onSubmit={submithandler}>
