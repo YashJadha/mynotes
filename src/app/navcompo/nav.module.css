@@ -1,0 +1,119 @@
+.nav {
+  width: 100%;
+  background-color: #1c1c1c;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.navhead {
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 0;
+  text-decoration: none;
+}
+
+.inneri {
+  cursor: pointer;
+  display: block;
+}
+
+
+.main_slider {
+  position: relative;
+  right: 31%;
+  display: block;
+}
+
+
+.slider {
+  width: 190px;
+  height: 50vh;
+  border: 4px;
+  background-color: #1c1c1c;
+  box-shadow: 0px 4px 13px rgb(0.4, 0.1, 0.5);
+  text-align: center;
+  padding: 40px 0px;
+  position: absolute;
+  animation-name: animatetop;
+  animation-duration: 0.8s;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.8s;
+  z-index: 999;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    right: -200px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    right: -200px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.lnk {
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  padding: 5px 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+
+.lnk:hover {
+  background-color: #ffffff91;
+}
+
+.lnk2 {
+  display: none;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  padding: 5px 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+
+.lnk2:hover {
+  background-color: #ffffff91;
+}
+
+@media screen and (max-width: 605px) {
+  .main_slider {
+    display: none;
+  }
+  .inneri{
+    display: none;
+  }
+  .lnk2{
+    display: block;
+  }
+}

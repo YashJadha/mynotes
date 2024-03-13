@@ -1,0 +1,59 @@
+.mainform{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inpt{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    background-color: #00000015;
+    border: none;
+    color: #000;
+}
+
+.btn{
+    width: 150px;
+    border-radius: 5px;
+    padding: 8px 5px;
+    border: none;
+    background-color: rgb(16, 228, 16);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #000000b7;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(16, 228, 16);
+    color: #000;
+}
+
+/* after 605px */
+@media screen and (max-width: 605px){
+    .mainform{
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+}
+
+/* for mobile after 405px */
+@media screen and (max-width: 405px){
+    .mainform{
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+}
